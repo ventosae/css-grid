@@ -28,3 +28,127 @@ h6 {
   font-size: 1.5em;
 }
 
+.codepen {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto 1fr 1fr auto;
+}
+
+.pen {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: black;
+  justify-items: start;
+  align-items: center;
+  grid-auto-flow: column;
+  grid-gap: 10px;
+  padding: 0 0.5rem 0 0.5rem;
+  border-bottom: #343436 5px solid;
+
+}
+
+.pen__details {
+  color: white;
+}
+
+.button {
+  padding: 10px;
+  background-color: #343436;
+  border-radius: 8%;
+  color: white;
+  border: none;
+  position: relative;
+}
+
+.button--dirty::before {
+  content: "";
+  display: block;
+  background-color: #ffc600;
+  width: calc(100% - 6px);
+  height: 2px;
+  position: absolute;
+  left: 3px; 
+  top: 3px;
+  
+}
+
+.button:hover {
+  transform: perspective(1px) translateZ(0);
+  opacity: 0.8;
+  transition-duration: 0.3s;
+}
+
+.code {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+ 
+  align-items: stretch;
+}
+
+.editor {
+  display: grid;
+  grid-template-rows: 50px 1fr;
+}
+
+.editor__header {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 20px 1fr 20px;
+  grid-template-rows: 50px;
+  align-items: center;
+  padding: 0 0.2rem 0 0.2rem;
+  background-color: #18272f;
+  color: white;
+}
+
+.button--small {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  margin-right: 0.2rem;
+  padding: 4px;
+}
+
+.editor__code {
+  display: grid;
+  /* height: 360px; */
+  justify-content: start;
+  background-color: #1b2b34;
+  grid-template-columns: 25px 1fr;
+}
+
+.editor__gutter {
+  color: white;
+  display: grid;
+  justify-content: center;
+  align-content: start;
+}
+
+.editor__input {
+  appearance: none;
+  border: none;
+  resize: none;
+  overflow:hidden;
+  background-color: transparent;
+  color: white;
+  opacity: 0.8;
+}
+
+.preview {
+  display: grid;
+  /* height: 418px; */
+}
+
+.settings {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(3, auto) 1fr;
+  padding-left: 0.2em;
+  /* height: 45px; */
+  background-color: #000000;
+  border-top: #808080 1px solid;
+  align-items: center;
+  padding: 5px;
+}
